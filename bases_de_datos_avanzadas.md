@@ -138,6 +138,11 @@ para respaldo y recuperación, procesos en paralelos, procesos compartidos.
 * Esperando ser invocados
 * Siempre corriendo
 
-## Log writer
+__¿Qué evento hace que un redo log file se vaya a un archive log file?__ 
+    R: Log switch
 
-Su fun
+
+```bash
+# utilería de recuperación
+rman target /
+```

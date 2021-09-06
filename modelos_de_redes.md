@@ -56,3 +56,26 @@ física.
 ## Definición de internet
 
 Conjunto descentralizado de redes de comunicación interconectadas.
+
+## PPP (Point to Point Protocol)
+
+A finales de los 80 el protocolo SLIP presentaba una limitación al crecimiento
+del internet. PPP se crea para solucionar problemas de conectividad remota de
+internet. PPP era necesario para poder asignar IP's de forma dinámica y permitir
+el uso de múltiples protocolos.
+
+### Funciones PPP
+
+* Control de la configuración del enlace de datos.
+* Proporciona asignación dinámica de IP's
+* Detección de errores.
+* Opciones de negociación.
+
+### Campos de la trama PPP
+
+* Señalador (1 byte)
+* Dirección (1 byte)
+* Control (1 byte)
+* Protocolo  (2 bytes)
+* Datos  (Variable)
+* FCS (2 o 4 bytes)

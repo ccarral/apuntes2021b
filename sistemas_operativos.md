@@ -51,3 +51,38 @@ un __espacio de direcciones__. También tiene:
 * Alarmas pendientes 
 * Procesos relacionados
 
+## Llamada a sistema `fork()`
+
+Cuando se hace la llamada a sistema `fork`, ésta devuelve el PID del nuevo
+proceso (el proceso hijo) en el proceso padre y `0` en el proceso hijo. 
+
+De acuerdo a `man fork`:
+```man
+FORK(2)                                                            Manual del Programador de Linux                                                            FORK(2)
+
+NOMBRE
+       fork - crean un proceso hijo
+
+SINOPSIS
+       #include <sys/types.h>
+       #include <unistd.h>
+
+       pid_t fork(void);
+
+DESCRIPCIÓN
+       fork  crea  un proceso hijo que difiere de su proceso padre sólo en su PID y PPID, y en el hecho de que el uso de recursos esté asignado a 0.  Los candados de
+       fichero (file locks) y las señales pendientes no se heredan.
+
+       En linux, fork está implementado usando páginas de copia-en-escritura (copy-on-write), así que la única penalización en que incurre fork es  en  el  tiempo  y
+       memoria requeridos para duplicar las tablas de páginas del padre, y para crear una única estructura de tarea (task structure) para el hijo.
+
+VALOR DEVUELTO
+       En  caso  de  éxito, se devuelve el PID del proceso hijo en el hilo de ejecución de su padre, y se devuelve un 0  en el hilo de ejecución del hijo. En caso de
+       fallo, se devolverá un -1 en el contexto del padre, no se creará ningún proceso hijo, y se pondrá en errno un valor apropiado.
+
+ERRORES
+       EAGAIN fork no puede reservar sufficiente memoria para copiar las tablas de páginas del padre y alojar una estructura de tarea para el hijo.
+
+       ENOMEM fork no pudo obtener las necesarias estructuras del núcleo porque la cantidad de memoria era escasa.
+
+```
