@@ -146,3 +146,21 @@ __¿Qué evento hace que un redo log file se vaya a un archive log file?__
 # utilería de recuperación
 rman target /
 ```
+
+## ADDM
+
+Módulo para monitorear y diagnosticar la B.D 
+
+## AWR
+
+Repositorio de cargas de trabajo de la B.D
+
+## Método para activar el modo `archivelog`
+
+```sql
+ARCHIVE LOG LIST;
+SHUTDOWN IMMEDIATE;
+STARTUP mount;
+ALTER DATABASE archivelog;
+ALTER DATABASE open;
+```
