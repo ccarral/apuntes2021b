@@ -86,3 +86,13 @@ ERRORES
        ENOMEM fork no pudo obtener las necesarias estructuras del núcleo porque la cantidad de memoria era escasa.
 
 ```
+
+## Interrupciones
+
+Tipos de interrupciones:
+
+* Interrupciones por software
+* Interrupciones por hardware
+
+__quantum:__ Longitud de tiempo que se le asigna a cada programa para ejecutarse
+en un entorno multiprogramación
