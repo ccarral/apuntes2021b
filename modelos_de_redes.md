@@ -79,3 +79,9 @@ el uso de múltiples protocolos.
 * Protocolo  (2 bytes)
 * Datos  (Variable)
 * FCS (2 o 4 bytes)
+
+### Tres generaciones de redes de transmisión
+
+* Jerarquía Digital Presíncrona __(PDH)__
+* Jerarquía Digital Síncrona __(SDH)__ o Sonet en E.U.A
+* Multiplexaje por División de Onda Densa __(DWDM)__
