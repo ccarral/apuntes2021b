@@ -32,7 +32,7 @@
 
 ## Customer Premises Equipment
 
-Se refierew a teléfonos, routers, switches, etc. provistos por el proovedor de
+Se refiere a teléfonos, routers, switches, etc. provistos por el proovedor de
 servicios. Conecta al suscriptor con el servicio.
 
 ## ¿Qué es un baudio?
@@ -85,3 +85,11 @@ el uso de múltiples protocolos.
 * Jerarquía Digital Presíncrona __(PDH)__
 * Jerarquía Digital Síncrona __(SDH)__ o Sonet en E.U.A
 * Multiplexaje por División de Onda Densa __(DWDM)__
+
+
+### Notas sobre conexiones DCE
+Para conectar de una nube (Cloud PT) aun router, se utiliza el DCE (reloj).
+
+### Conceptos de Frame Relay
+* DLCI: son únicos por puerto serial. Utilizados para identificar conexiones PVC específicas.
+* PVC: Unión de 2 DLCI's
