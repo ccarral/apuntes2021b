@@ -191,3 +191,32 @@ horas extras accesos, etc.
 * Verbos en infinitivo
 * ¿Qué?
 * ¿Para qué?
+
+## Proceso unificado
+
+### Cuatro fases
+
+* Inicio
+* Elaboración
+* Construcción
+* Transición
+
+Cada fase se divide a su vez en una o varias iteraciones.
+Cada ciclo produce una versión funcional del sistema. Cada fase termina con un
+hito.
+
+### Flujos de trabajo fundamentales
+
+* Requisitos
+* Análisis
+* Diseño
+* Implementación
+* Pruebas
+
+
+__Artefacto:__ Unidad entregable de software.
+
+### Pilares del model unificado.
+
+* Dirigido por casos de uso
+

@@ -96,3 +96,10 @@ Tipos de interrupciones:
 
 __quantum:__ Longitud de tiempo que se le asigna a cada programa para ejecutarse
 en un entorno multiprogramación
+
+
+## Hilos vs. Procesos
+
+En comparación con los procesos, los hilos son manejados desde un mismo proceso.
+Comparten el mismo espacio de direcciones dentro del mismo proceso y son más
+fáciles de crear y destruir.

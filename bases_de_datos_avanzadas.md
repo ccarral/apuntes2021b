@@ -76,6 +76,8 @@ SHOW PARAMETER BLOCK
 
 El diccionario de datos se utiliza cuando se compila una instrucción.
 
+__Pregunta de examen__: El diccionario de datos se encuentra en los data files.
+
 ## ¿Qué es un commit?
 
 Un commit es el predicado que finaliza todos los cambios especificados en una transacción.
@@ -173,3 +175,13 @@ QUOTA 10M ON USERS;
 GRANT CONNECT TO carlos;
 GRANT CREATE SESSION TO carlos;
 ```
+#### ¿En qué caso sería util montar una instancia __sin__ base de datos?
+
+Para __crear__ la BD.
+
+
+#### Usuario para proyecto
+
+Usuario: training 
+password: oracle1 
+
