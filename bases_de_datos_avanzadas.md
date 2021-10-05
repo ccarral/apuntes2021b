@@ -185,3 +185,32 @@ Para __crear__ la BD.
 Usuario: training 
 password: oracle1 
 
+
+### Secuencia de creación de una BD
+
+ 1. Crear el archivo de parámetros
+ 2. Crear el archivo de contraseñas
+ 3. Ejecutar comando `CREATE DATABASE`
+ 4. Crear los data dictionary views
+
+
+### Primer examen parcial
+
+`$ORACLE_BASE` contiene todos los `$ORACLE_HOME`s, que pueden ser versiones de
+cualquier producto. 
+
+El "Optimal Flexible Architecture" es una estructura de directorios. 
+
+La variable de entorno `$DISPLAY` tiene que estar activa para una instalación
+interactiva.  
+
+El `$ORACLE_HOME` puede existir en un sistema de archivos local o en cluster. 
+
+Una instancia debe de estar corriendo antes de crear la B.D
+
+El parámetro `DB_BLOCK_SIZE` nunca puede ser cambiado después de la creación de
+la B.D. 
+
+No es posible cambiar el conjunto de caracteres después de la creación de BD. 
+
+Database Express se configura con un puerto diferente para cada Base de Datos.
