@@ -93,3 +93,4 @@ Para conectar de una nube (Cloud PT) aun router, se utiliza el DCE (reloj).
 ### Conceptos de Frame Relay
 * DLCI: son únicos por puerto serial. Utilizados para identificar conexiones PVC específicas.
 * PVC: Unión de 2 DLCI's
+* Frame relay pertenece a capa 2
