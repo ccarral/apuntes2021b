@@ -103,3 +103,13 @@ en un entorno multiprogramación
 En comparación con los procesos, los hilos son manejados desde un mismo proceso.
 Comparten el mismo espacio de direcciones dentro del mismo proceso y son más
 fáciles de crear y destruir.
+
+## Regiónes críticas
+
+Son las regiones de memoria que pueden ser modificadas por múltiples procesos.
+
+## Condiciones de carrera
+
+Ocurren cuando dos procesos quieren escribir/leer un recurso compartido
+simultáneamente y el resultado final depende directamente del orden en el que
+las operaciones de e/s fueron registradas.

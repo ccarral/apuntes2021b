@@ -64,7 +64,7 @@ CREATE PFILE FROM SPFILE
 
 `SGA + PGA < MEMORY_MAX_TARGET` en donde:
 
-* PGA: memoria usada por los clientes
+* Program Global Area (PGA): memoria usada por los clientes
 * SGA: memoria usada por las instancias
 
 __Bloque de BD:__ Unidad mínima de manipulación de datos.
@@ -84,9 +84,13 @@ Un commit es el predicado que finaliza todos los cambios especificados en una tr
 Una transacción, a su vez, es una secuencia de predicados SQL que se tratan como
 una unidad.
 
+## ¿Qué pasa en un commit?
+
+El log writer escribe los datos del log buffer al disco.
+
 ## Espacios de memoria en la instancia en una Single Instance Database
 
-## Shared Pool
+### Shared Pool
 
 Almacena sentencias SQL y código PSQL (cursor). Un cursor es un espacio en
 memoria que almacena texto, código SQL y plan de ejecución de sentencias.
@@ -132,6 +136,11 @@ Un espacio de la SGA para replicación de datos.
 
 Un espacio  de la SGA para el procesamiento masivo de datos como: Buffer de IO
 para respaldo y recuperación, procesos en paralelos, procesos compartidos.
+
+### Requisitos de memoria de la instancia
+
+* Cada instancia debe de tener una DB cache buffer, un log buffer y un shared
+  pool.
 
 ## Características de los demonios (daemons)
 
@@ -193,6 +202,12 @@ password: oracle1
  3. Ejecutar comando `CREATE DATABASE`
  4. Crear los data dictionary views
 
+### Protocolos utilizables en Oracle Net 12c
+
+* TCP
+* UDP
+* TCP con sockets seguros
+* Named Pipes
 
 ### Primer examen parcial
 
@@ -214,3 +229,29 @@ la B.D.
 No es posible cambiar el conjunto de caracteres después de la creación de BD. 
 
 Database Express se configura con un puerto diferente para cada Base de Datos.
+
+La SGA es escrita por todas las sesiones y la SGA es asignada en el `STARTUP` de
+la instancia.
+
+El log buffer es de un tamaño fijo al momento del `STARTUP`. Todos los demás
+pueden variar dinámicamente.
+
+Un log buffer no puede ser cambiado de tamaño manualmente.
+
+Cuando una sesión hace cambios de datos, el cambio es plasmado en el data block
+en la cache y en el redo log buffer. 
+
+El Cloud Control agent no se necesita para usar Database Express
+
+Cuando se usa la instrucción `ALTER SYSTEM` se alteran los valores en memoria y
+en el spfile. 
+
+Montar la base de datos es el proceso de abrir el control file y todas sus
+copias. 
+
+`SHUTDOWN NORMAL` termina hasta que todas las __sesiones__ se han desconectado
+voluntariamente. 
+
+La ubicación por default del background process trace file se encuentra en
+`$DIAGNOSTIC_TEST` 
+
