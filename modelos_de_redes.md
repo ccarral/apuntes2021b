@@ -94,3 +94,20 @@ Para conectar de una nube (Cloud PT) aun router, se utiliza el DCE (reloj).
 * DLCI: son únicos por puerto serial. Utilizados para identificar conexiones PVC específicas.
 * PVC: Unión de 2 DLCI's
 * Frame relay pertenece a capa 2
+
+### Sonet - SDH
+
+Conjunto de estándares para la transmisión o transporte de datos síncronos
+a través de redes de fibra óptica. Se diferencian en las técnicas usadas para la transmisión y el
+transporte además de los países en los que son aplicados.
+__Utilizan arquitectura de red de anillo__. Inicialmente eran usados para el transporte de tráfico de voz.
+
+__S__ynchronous __O__ptical __NET__work.
+
+#### Soporta:
+
+* IP
+* ATM
+* MPLS
+
+Actualmente es la red de transporte __más versátil__.
